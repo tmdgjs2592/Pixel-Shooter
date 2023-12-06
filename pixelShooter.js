@@ -262,8 +262,10 @@ export class PixelShooter extends Scene {
             }
         }
 
-        if (!this.on_ground || !this.on_ground2) {
+        if (!this.on_ground) {
             this.player_velocity[1] -= 9.8 * dt; // Continue applying gravity
+        }
+        if (!this.on_ground2) {
             this.player_velocity2[1] -= 9.8 * dt; // Continue applying gravity
         }
 
